@@ -49,7 +49,7 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "/",
+    "start_url": "/boord/",
     "id": "/",
     "orientation": "portrait",
     "display": "standalone",
