@@ -4,13 +4,23 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/boord/',
+    resolve: {
+        alias: {
+            '@': '/src',
+        },
+    },
+    build: {
+        rollupOptions: {
+            output: {
+                entryFileNames: `assets/[hash].js`,
+                chunkFileNames: `assets/[hash].js`,
+                assetFileNames: `assets/[hash].[ext]`,
+            },
+        },
+    },
     plugins: [svgr(), react()],
+    base: '/boord/',
     server: {
-        // https: {
-        //     key: './boord-privateKey.key',
-        //     cert: './boord.crt',
-        // },
         port: 5173,
         strictPort: true,
     },
