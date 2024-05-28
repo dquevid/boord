@@ -49,6 +49,12 @@
             "sizes": "384x384"
         },
         {
+            "src": "images/maskable_icon_x512.png",
+            "purpose": "maskable",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
             "src": "images/monochrome_icon_x512.png",
             "purpose": "maskable monochrome",
             "type": "image/png",
