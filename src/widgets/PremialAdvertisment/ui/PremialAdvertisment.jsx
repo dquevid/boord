@@ -8,7 +8,13 @@ export default function PremialAdvertisment({ advertisment, seller }) {
             seller={seller}
             slotInteraction={
                 <>
-                    <Button>Позвонить</Button>
+                    <Button
+                        onClick={() => {
+                            if (navigator in window)
+                                navigator.vibrate(Array.from(Array(3).keys()).map(i => 100))
+                        }}>
+                        Позвонить
+                    </Button>
                     <Button variant="light">Написать</Button>
                 </>
             }

@@ -1,10 +1,18 @@
-import Star from '@/shared/assets/svg/kid_star.svg?react'
+import Star from '@/shared/assets/svg/star.svg?react'
 
 export default function AdvertismentCard({ title, price, geo, date, rating }) {
     return (
         <>
             <article className="rounded-2xl overflow-clip bg-white">
-                <div className="h-36 bg-neutral-300"></div>
+                <div className="h-32 relative bg-neutral-300 p-2">
+                    <div className="w-full absolute left-0 bottom-0 flex gap-4 p-2 justify-center">
+                        {Array.from(Array(4).keys()).map(i => (
+                            <div
+                                key={i}
+                                className={`w-2 h-2 ${i == 0 ? 'bg-neutral-400' : 'bg-white'} rounded-full`}></div>
+                        ))}
+                    </div>
+                </div>
                 <div className="flex flex-col gap-1.5 p-4">
                     <h1 className="text-sm font-bold">{title}</h1>
                     <h2 className="text-sm font-bold">{price}</h2>

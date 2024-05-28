@@ -1,4 +1,4 @@
-import Star from '@/shared/assets/svg/kid_star.svg?react'
+import Star from '@/shared/assets/svg/star.svg?react'
 
 export default function PremialAdvertismentSeller({ name, rating, sales, reviews }) {
     return (

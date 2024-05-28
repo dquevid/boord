@@ -6,7 +6,6 @@
 @tailwind utilities;
 
 #root {
-    height: 100dvh;
     font-family: 'Roboto', sans-serif;
 }
 
