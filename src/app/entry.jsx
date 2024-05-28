@@ -29,7 +29,7 @@ const router = createBrowserRouter([
                         <p className="text-neutral-600 leading-6">
                             К сожалению, нам не удалось найти запрашиваемую страницу.
                         </p>
-                        <Link to="/boord" className="rounded-xl text-neutral-100 bg-neutral-900 px-4 py-2">
+                        <Link to="/boord" className="rounded-md text-neutral-100 bg-neutral-900 px-4 py-2">
                             Вернуться
                         </Link>
                     </div>
