@@ -24,7 +24,7 @@ export default function GlobalMenu({ items }) {
                             }
                         :   undefined
                     }
-                    className="absolute rounded-full bg-neutral-900"
+                    className="absolute duration-500 rounded-full bg-neutral-900"
                 />
                 {items.map((e, i) => (
                     <GlobalMenuItem
