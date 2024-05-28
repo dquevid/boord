@@ -7,15 +7,34 @@ export default function GlobalMenu() {
     return (
         <GlobalMenuLayout
             items={[
-                <Plus className="mix-blend-difference stroke-white" width={32} height={32} />,
-                <Boord className="mix-blend-difference fill-white" width={32} height={32} />,
-                <img
-                    className="relative rounded-full"
-                    width={32}
-                    height={32}
-                    src="https://dummyimage.com/500"
-                    alt=""
-                />,
+                {
+                    url: '/boord/activities',
+                    item: (
+                        <Plus
+                            className="mix-blend-difference stroke-white"
+                            width={32}
+                            height={32}
+                        />
+                    ),
+                },
+                {
+                    url: '/boord',
+                    item: (
+                        <Boord className="mix-blend-difference fill-white" width={32} height={32} />
+                    ),
+                },
+                {
+                    url: '/boord/profile/me',
+                    item: (
+                        <img
+                            className="relative rounded-full"
+                            width={32}
+                            height={32}
+                            src="https://dummyimage.com/500"
+                            alt=""
+                        />
+                    ),
+                },
             ]}
         />
     )

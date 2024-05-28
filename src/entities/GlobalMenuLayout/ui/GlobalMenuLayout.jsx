@@ -8,8 +8,7 @@ export default function GlobalMenu({ items }) {
     const ref = useRef()
 
     useEffect(() => {
-        const rect_ = ref.current.getBoundingClientRect()
-        setRect(rect_)
+        setRect(ref.current.getBoundingClientRect())
     }, [active])
 
     return (
@@ -27,14 +26,15 @@ export default function GlobalMenu({ items }) {
                     }
                     className="absolute rounded-full bg-neutral-900"
                 />
-                {items.map((item, i) => (
+                {items.map((e, i) => (
                     <GlobalMenuItem
                         key={i}
                         {...(i == active ? { ref: ref } : {})}
+                        url={e.url}
                         onClick={() => {
                             setActive(i)
                         }}>
-                        {item}
+                        {e.item}
                     </GlobalMenuItem>
                 ))}
             </div>

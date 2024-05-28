@@ -1,10 +1,11 @@
 import { forwardRef } from "react"
+import { Link } from "react-router-dom"
 
-const GlobalMenuItem = forwardRef(({ children, title, onClick, className }, ref) => {
+const GlobalMenuItem = forwardRef(({ children, url, onClick, className }, ref) => {
     return (
-        <button className={'p-1 ' + className} {...{ title, onClick, ref }}>
+        <Link to={url} className={'p-1 ' + className} {...{ onClick, ref }}>
             {children}
-        </button>
+        </Link>
     )
 })
 

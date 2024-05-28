@@ -1,6 +1,5 @@
 import { PremialAdvertisment } from '@/widgets/PremialAdvertisment'
 import { Advertisment } from '@/widgets/Advertisment'
-import { GlobalMenu } from '@/widgets/GlobalMenu'
 
 export default function App() {
     const sellers = [
@@ -28,7 +27,7 @@ export default function App() {
 
     return (
         <>
-            <div className="flex flex-col gap-4 p-8 h-full overflow-scroll text-neutral-950 bg-neutral-100">
+            <div className="flex flex-col gap-4 p-8 pb-[100px] h-full overflow-scroll text-neutral-950 bg-neutral-100">
                 <PremialAdvertisment advertisment={advertisments[0]} seller={sellers[0]} />
                 {Array.from(Array(5).keys()).map(i => (
                     <div key={i} className="flex gap-3">
@@ -37,7 +36,6 @@ export default function App() {
                     </div>
                 ))}
             </div>
-            <GlobalMenu />
         </>
     )
 }
