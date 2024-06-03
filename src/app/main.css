@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background: #f5f5f5;
+}
+
 #root {
     font-family: 'Roboto', sans-serif;
 }
@@ -20,4 +24,26 @@
 .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+}
+
+.page-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all .3s;
+}
+
+.page-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-exit-active {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .3s;
 }

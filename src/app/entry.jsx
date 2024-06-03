@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Link, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import App from './layouts/App.jsx'
+import { Link, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { GlobalMenu } from '@/widgets/GlobalMenu'
+import { Boord } from '@/pages/Boord'
 import '@/app/main.css'
 
 const router = createBrowserRouter([
@@ -10,14 +11,14 @@ const router = createBrowserRouter([
         path: '/boord/',
         element: (
             <>
-                <Outlet />
+                <App />
                 <GlobalMenu />
             </>
         ),
         children: [
             {
                 path: '/boord/',
-                element: <App />,
+                element: <Boord />,
             },
             {
                 path: '/boord/*',
@@ -29,7 +30,9 @@ const router = createBrowserRouter([
                         <p className="text-neutral-600 leading-6">
                             К сожалению, нам не удалось найти запрашиваемую страницу.
                         </p>
-                        <Link to="/boord" className="rounded-lg text-neutral-100 bg-neutral-900 px-4 py-2 active:scale-90">
+                        <Link
+                            to="/boord"
+                            className="rounded-lg text-neutral-100 bg-neutral-900 px-4 py-2 active:scale-90">
                             Вернуться
                         </Link>
                     </div>
